@@ -1,0 +1,228 @@
+/* Réinitialisation des marges et paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Importer la police Roboto */
+body {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+/* Conteneur de l'image */
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 800px; /* Hauteur fixe pour le conteneur de l'image */
+    background: url('emile-perron-xrVDYZRGdw4-unsplash.jpg') no-repeat center center;
+    background-size: cover; /* Assure que l'image couvre tout le conteneur */
+}
+
+/* Style de la barre de navigation */
+.navbar {
+    position: absolute;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-items {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    padding-top: 30px;
+}
+
+.logo {
+    color: white;
+    font-size: 1.4em; /* Taille des caractères agrandie */
+    margin-right: auto; /* Pousse les éléments suivants vers la droite */
+    padding-left: 40px;
+}
+
+.centered-items {
+    display: flex;
+    justify-content: center; /* Centre les éléments horizontalement */
+    gap: 30px; /* Ajoute des espaces entre les éléments */
+    flex: 1; /* Prend l'espace disponible */
+}
+
+.centered-items li {
+    font-size: 1.4em; /* Taille des caractères agrandie */
+}
+
+.centered-items a {
+    text-decoration: none;
+    color: white; /* Couleur des liens */
+}
+
+.navbar-items li a:hover {
+    color: mediumorchid; /* Couleur des liens au survol */
+}
+
+/* Style du texte superposé */
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%); /* Centre le texte verticalement et horizontalement */
+    color: white;
+    text-align: center;
+    z-index: 1; /* Assure que le texte est au-dessus de l'image */
+    padding: 20px; /* Ajoute du padding autour du texte */
+    background: rgba(0, 0, 0, 0.5); /* Optionnel : ajoute un fond semi-transparent pour améliorer la lisibilité */
+    border-radius: 10px; /* Optionnel : arrondit les coins du fond */
+    font-size: 3em;
+}
+
+/* Style de la section Work */
+.work {
+    display: flex; /* Utiliser flexbox pour aligner les éléments sur une seule ligne */
+    justify-content: space-between; /* Espacer les éléments de manière égale */
+    max-width: 80%; /* Largeur maximale du conteneur */
+    margin: 0 auto; /* Centre le conteneur */
+    padding: 20px; /* Ajoute du padding autour du conteneur */
+    padding-top: 100px;
+}
+
+.work-item {
+    text-align: center;
+    flex: 1; /* Chaque élément prend une largeur égale */
+    margin: 0 10px; /* Espacement horizontal entre les éléments */
+}
+
+.work-item img {
+    width: 100%;
+    height: 80%; /* Conserve les proportions de l'image */
+    object-fit: cover; /* Assure que l'image couvre le conteneur */
+    border-radius: 8px; /* Arrondit les coins de l'image */
+}
+
+.work-item p {
+    margin-top: 10px;
+    font-size: 1.1em; /* Taille du texte de la description */
+}
+
+/* Style de la section About Me */
+.aboutme {
+    display: flex; /* Utiliser flexbox pour aligner les éléments horizontalement */
+    align-items: center; /* Aligne les éléments verticalement au centre */
+    background-color: rgb(246, 204, 211);
+    max-width: 100%; /* Largeur maximale du conteneur */
+    padding: 20px; /* Ajoute du padding autour du conteneur */
+    gap: 20px; /* Espacement entre les colonnes */
+}
+
+.aboutme-item {
+    flex: 1; /* Chaque élément prend une largeur égale */
+}
+
+.aboutme img {
+    width: 100%; /* Largeur de l'image */
+    height: auto; /* Conserve les proportions de l'image */
+    border-radius: 8px; /* Arrondit les coins de l'image */
+}
+
+.aboutme p {
+    font-size: 1.1em; /* Taille du texte */
+}
+/* Style de la section de contact */
+#contact {
+    background-color: #f9f9f9; /* Couleur de fond claire */
+    padding: 40px 20px; /* Espacement intérieur */
+    max-width: 800px; /* Largeur maximale du conteneur */
+    
+    border-radius: 10px; /* Arrondit les coins du conteneur */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère */
+    text-align: center; /* Centre le texte */
+}
+
+#contact h2 {
+    margin-bottom: 20px; /* Espace sous le titre */
+    color: #333; /* Couleur du texte du titre */
+    font-size: 2em; /* Taille du texte du titre */
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Dispose les éléments du formulaire en colonne */
+    gap: 15px; /* Espace entre les éléments du formulaire */
+}
+
+label {
+    text-align: left; /* Aligne le texte des labels à gauche */
+    font-size: 1.1em; /* Taille du texte des labels */
+    color: #555; /* Couleur du texte des labels */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Prend toute la largeur disponible */
+    padding: 10px; /* Espacement intérieur */
+    border: 1px solid #ddd; /* Bordure légère */
+    border-radius: 5px; /* Arrondit les coins des champs */
+    font-size: 1em; /* Taille du texte */
+}
+
+textarea {
+    height: 50px; /* Hauteur fixe pour la zone de texte */
+    resize: vertical; /* Permet à l'utilisateur de redimensionner la zone de texte verticalement */
+}
+
+button {
+    background-color: #007BFF; /* Couleur de fond du bouton */
+color: white; /* Couleur du texte du bouton */
+border: none; /* Supprime la bordure par défaut */
+padding: 10px 20px; /* Espacement intérieur */
+border-radius: 5px; /* Arrondit les coins du bouton */
+font-size: 1.1em; /* Taille du texte du bouton */
+cursor: pointer; /* Change le curseur en pointeur */
+transition: background-color 0.3s; /* Transition douce pour la couleur de fond */
+}
+
+button:hover {
+background-color: #0056b3; /* Couleur de fond du bouton au survol */
+}
+
+/* Style du footer */
+footer {
+    background-color: #333; /* Couleur de fond du footer */
+    color: white; /* Couleur du texte */
+    padding: 20px; /* Espacement intérieur */
+    text-align: center; /* Centre le texte */
+    position: relative; /* Positionnement relatif pour le footer */
+    bottom: 0; /* Positionne le footer en bas de la page */
+    width: 100%; /* Largeur du footer */
+}
+
+.footer-container {
+    display: flex; /* Utilise flexbox pour l'alignement */
+    justify-content: space-between; /* Espace entre les éléments */
+    align-items: center; /* Centre les éléments verticalement */
+    max-width: 1200px; /* Largeur maximale du conteneur */
+    margin: 0 auto; /* Centre le conteneur */
+}
+
+.footer-container p {
+    margin: 0; /* Supprime les marges du paragraphe */
+}
+
+.social-links {
+    display: flex; /* Utilise flexbox pour les icônes sociales */
+    gap: 15px; /* Espace entre les icônes */
+}
+
+.social-icon {
+    color: white; /* Couleur des icônes */
+    font-size: 1.5em; /* Taille des icônes */
+    text-decoration: none; /* Supprime la décoration des liens */
+}
+
+.social-icon:hover {
+    color: #ddd; /* Couleur des icônes au survol */
+}
